@@ -9,8 +9,11 @@
 import UIKit
 
 
+
+
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +23,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             // User is already logged in, do work such as go to next view controller.
-            returnUserData()
+
+            let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,picture.width(100).height(100)"], tokenString: FBSDKAccessToken.currentAccessToken().tokenString, version: nil, HTTPMethod: "GET")
+            req.startWithCompletionHandler({ (connection, result, error : NSError!) -> Void in
+                if(error == nil)
+                {
+                    print("result \(result)")
+                }
+                else
+                {
+                    print("error \(error)")
+                }
+            })
+            
+            
+            
             dispatch_async(dispatch_get_main_queue()) {
                 self.performSegueWithIdentifier("continueAfterLogin", sender: nil)
             }
@@ -68,6 +85,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func returnUserData()
     {
+        
+        
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -79,8 +98,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             else
             {
                 print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
-                print("User Name is: \(userName)")
+                if let userName : NSString = result.valueForKey("name") as? NSString {
+                    print("User Name is: \(userName)")
+                }
+                
+                
+                
                 /*
                 let userEmail : NSString = result.valueForKey("email") as! NSString
                 print("User Email is: \(userEmail)")*/
