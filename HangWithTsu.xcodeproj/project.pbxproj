@@ -15,6 +15,7 @@
 		20780C881CD8499900210B17 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C871CD8499900210B17 /* FBSDKCoreKit.framework */; };
 		20780C8B1CD84AA800210B17 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C8A1CD84AA800210B17 /* FBSDKLoginKit.framework */; };
 		20780C8D1CD84AB000210B17 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C8C1CD84AB000210B17 /* FBSDKShareKit.framework */; };
+		FFEBD3C43875777063931DFB /* Pods_HangWithTsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806721DBDA3A8BA93A4F326F /* Pods_HangWithTsu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		20780C8A1CD84AA800210B17 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		20780C8C1CD84AB000210B17 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		20780C8E1CD84C0B00210B17 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		806721DBDA3A8BA93A4F326F /* Pods_HangWithTsu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HangWithTsu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A894A21ACF80112C54E389 /* Pods-HangWithTsu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangWithTsu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangWithTsu/Pods-HangWithTsu.release.xcconfig"; sourceTree = "<group>"; };
+		C27981C5837646049F602661 /* Pods-HangWithTsu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangWithTsu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangWithTsu/Pods-HangWithTsu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 				20780C8B1CD84AA800210B17 /* FBSDKLoginKit.framework in Frameworks */,
 				20780C881CD8499900210B17 /* FBSDKCoreKit.framework in Frameworks */,
 				20780C8D1CD84AB000210B17 /* FBSDKShareKit.framework in Frameworks */,
+				FFEBD3C43875777063931DFB /* Pods_HangWithTsu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				20780C741CD8395B00210B17 /* HangWithTsu */,
 				20780C731CD8395B00210B17 /* Products */,
+				8E9F282F0442799749AE0071 /* Pods */,
+				2E4C21C323FDAC1668E62030 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +93,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2E4C21C323FDAC1668E62030 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				806721DBDA3A8BA93A4F326F /* Pods_HangWithTsu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E9F282F0442799749AE0071 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C27981C5837646049F602661 /* Pods-HangWithTsu.debug.xcconfig */,
+				A9A894A21ACF80112C54E389 /* Pods-HangWithTsu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20780C841CD8395B00210B17 /* Build configuration list for PBXNativeTarget "HangWithTsu" */;
 			buildPhases = (
+				B9D20F56E94683F44EF77E1D /* Check Pods Manifest.lock */,
 				20780C6E1CD8395B00210B17 /* Sources */,
 				20780C6F1CD8395B00210B17 /* Frameworks */,
 				20780C701CD8395B00210B17 /* Resources */,
+				25539DE7ABFA1EA8F705C706 /* Embed Pods Frameworks */,
+				7207EED243091C24000EC22D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25539DE7ABFA1EA8F705C706 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HangWithTsu/Pods-HangWithTsu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7207EED243091C24000EC22D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HangWithTsu/Pods-HangWithTsu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9D20F56E94683F44EF77E1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20780C6E1CD8395B00210B17 /* Sources */ = {
@@ -267,6 +342,7 @@
 		};
 		20780C851CD8395B00210B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C27981C5837646049F602661 /* Pods-HangWithTsu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -283,6 +359,7 @@
 		};
 		20780C861CD8395B00210B17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A894A21ACF80112C54E389 /* Pods-HangWithTsu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -316,6 +393,7 @@
 				20780C861CD8395B00210B17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
