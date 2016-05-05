@@ -15,6 +15,10 @@
 		20780C881CD8499900210B17 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C871CD8499900210B17 /* FBSDKCoreKit.framework */; };
 		20780C8B1CD84AA800210B17 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C8A1CD84AA800210B17 /* FBSDKLoginKit.framework */; };
 		20780C8D1CD84AB000210B17 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C8C1CD84AB000210B17 /* FBSDKShareKit.framework */; };
+		20C97ED91CDAFAE4007A3823 /* Logout Rounded-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20C97ED71CDAFAE4007A3823 /* Logout Rounded-50@2x.png */; };
+		20C97EDA1CDAFAE4007A3823 /* Message-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20C97ED81CDAFAE4007A3823 /* Message-50@2x.png */; };
+		20C97EDC1CDB0014007A3823 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97EDB1CDB0014007A3823 /* EventsTableViewController.swift */; };
+		20C97EDE1CDB003B007A3823 /* EventsFoldingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97EDD1CDB003B007A3823 /* EventsFoldingTableViewCell.swift */; };
 		FFEBD3C43875777063931DFB /* Pods_HangWithTsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806721DBDA3A8BA93A4F326F /* Pods_HangWithTsu.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		20780C8A1CD84AA800210B17 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		20780C8C1CD84AB000210B17 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		20780C8E1CD84C0B00210B17 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		20C97ED71CDAFAE4007A3823 /* Logout Rounded-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logout Rounded-50@2x.png"; sourceTree = "<group>"; };
+		20C97ED81CDAFAE4007A3823 /* Message-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message-50@2x.png"; sourceTree = "<group>"; };
+		20C97EDB1CDB0014007A3823 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		20C97EDD1CDB003B007A3823 /* EventsFoldingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsFoldingTableViewCell.swift; sourceTree = "<group>"; };
 		806721DBDA3A8BA93A4F326F /* Pods_HangWithTsu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HangWithTsu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A894A21ACF80112C54E389 /* Pods-HangWithTsu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangWithTsu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangWithTsu/Pods-HangWithTsu.release.xcconfig"; sourceTree = "<group>"; };
 		C27981C5837646049F602661 /* Pods-HangWithTsu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangWithTsu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangWithTsu/Pods-HangWithTsu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +84,12 @@
 				20780C8E1CD84C0B00210B17 /* Bridging-Header.h */,
 				20780C771CD8395B00210B17 /* ViewController.swift */,
 				20780C791CD8395B00210B17 /* Main.storyboard */,
+				20C97EDD1CDB003B007A3823 /* EventsFoldingTableViewCell.swift */,
+				20C97EDB1CDB0014007A3823 /* EventsTableViewController.swift */,
 				20780C7C1CD8395B00210B17 /* Assets.xcassets */,
 				20780C7E1CD8395B00210B17 /* LaunchScreen.storyboard */,
 				20780C811CD8395B00210B17 /* Info.plist */,
+				20C97ED61CDAFAD2007A3823 /* Icons */,
 			);
 			path = HangWithTsu;
 			sourceTree = "<group>";
@@ -91,6 +102,15 @@
 				20780C871CD8499900210B17 /* FBSDKCoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20C97ED61CDAFAD2007A3823 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				20C97ED71CDAFAE4007A3823 /* Logout Rounded-50@2x.png */,
+				20C97ED81CDAFAE4007A3823 /* Message-50@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		2E4C21C323FDAC1668E62030 /* Frameworks */ = {
@@ -171,8 +191,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C97EDA1CDAFAE4007A3823 /* Message-50@2x.png in Resources */,
 				20780C801CD8395B00210B17 /* LaunchScreen.storyboard in Resources */,
 				20780C7D1CD8395B00210B17 /* Assets.xcassets in Resources */,
+				20C97ED91CDAFAE4007A3823 /* Logout Rounded-50@2x.png in Resources */,
 				20780C7B1CD8395B00210B17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,8 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C97EDE1CDB003B007A3823 /* EventsFoldingTableViewCell.swift in Sources */,
 				20780C781CD8395B00210B17 /* ViewController.swift in Sources */,
 				20780C761CD8395B00210B17 /* AppDelegate.swift in Sources */,
+				20C97EDC1CDB0014007A3823 /* EventsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

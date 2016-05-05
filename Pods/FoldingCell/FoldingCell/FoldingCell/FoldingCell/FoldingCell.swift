@@ -26,9 +26,12 @@ import UIKit
 public class FoldingCell: UITableViewCell {
   
   public typealias CompletionHandler = () -> Void
-  
-  @IBOutlet weak public var containerView: UIView!
-  @IBOutlet weak public var foregroundView: RotatedView!
+  @IBOutlet public weak var foregroundView: RotatedView!
+  @IBOutlet public weak var containerView: UIView!
+    
+
+  //@IBOutlet weak public var containerView: UIView!
+  //@IBOutlet weak public var foregroundView: RotatedView!
   var animationView: UIView?
   
   @IBInspectable public var itemCount: NSInteger = 2 //count of folding
