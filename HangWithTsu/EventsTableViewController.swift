@@ -11,8 +11,8 @@ import FoldingCell
 
 class EventsTableViewController: UITableViewController {
 
-    let kCloseCellHeight: CGFloat = 75
-    let kOpenCellHeight: CGFloat = 128
+    let kCloseCellHeight: CGFloat = 90
+    let kOpenCellHeight: CGFloat = 270
     var cellHeights = [CGFloat]()
     
     override func viewDidLoad() {
