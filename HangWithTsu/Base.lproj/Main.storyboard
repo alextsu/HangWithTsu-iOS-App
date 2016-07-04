@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="1280.5" y="357.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Scroll View Controller-->
         <scene sceneID="FAT-Ub-qFE">
             <objects>
-                <viewController id="s0V-wu-a2Q" sceneMemberID="viewController">
+                <viewController id="s0V-wu-a2Q" customClass="ScrollViewController" customModule="HangWithTsu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gQb-Vl-GG7"/>
                         <viewControllerLayoutGuide type="bottom" id="gLT-sq-YDh"/>
@@ -155,12 +155,12 @@
                                 <rect key="frame" x="-4" y="64" width="383" height="553"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kSr-S4-w2c">
-                                <rect key="frame" x="16" y="597" width="343" height="20"/>
+                                <rect key="frame" x="16" y="69" width="343" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="ZyF-Lo-JBS"/>
+                                    <constraint firstAttribute="height" constant="25" id="ZyF-Lo-JBS"/>
                                 </constraints>
-                                <color key="pageIndicatorTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="pageIndicatorTintColor" red="0.94901960780000005" green="0.46666666670000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev2-s9-ENi">
                                 <rect key="frame" x="-4" y="617" width="383" height="50"/>
@@ -187,6 +187,7 @@
                             <constraint firstItem="kSr-S4-w2c" firstAttribute="leading" secondItem="Z3T-xH-Y9V" secondAttribute="leadingMargin" id="Sh4-03-YNh"/>
                             <constraint firstItem="WCd-rT-k6D" firstAttribute="leading" secondItem="Z3T-xH-Y9V" secondAttribute="leadingMargin" constant="-20" id="U2g-lC-UuY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ev2-s9-ENi" secondAttribute="bottom" id="UXM-Go-2ze"/>
+                            <constraint firstItem="kSr-S4-w2c" firstAttribute="top" secondItem="gQb-Vl-GG7" secondAttribute="bottom" constant="5" id="Zl9-dH-DNi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ev2-s9-ENi" secondAttribute="trailing" constant="-20" id="aNa-36-AxY"/>
                             <constraint firstItem="ev2-s9-ENi" firstAttribute="top" secondItem="WCd-rT-k6D" secondAttribute="bottom" id="cud-ON-AUm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kSr-S4-w2c" secondAttribute="trailing" id="dB5-Hw-uur"/>
@@ -196,6 +197,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4cc-Xa-35p"/>
                                 <exclude reference="3Oe-JP-rPx"/>
                             </mask>
                         </variation>
@@ -214,15 +216,19 @@
                         <barButtonItem key="rightBarButtonItem" image="Logout Rounded-50.png" id="3AL-yx-UKu"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControl" destination="kSr-S4-w2c" id="Fdm-aq-ntd"/>
+                        <outlet property="scrollView" destination="WCd-rT-k6D" id="PhW-U6-ksY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEt-W8-zQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1280.5" y="1109.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="cPY-5c-rvv">
             <objects>
-                <viewController id="CR8-bm-30V" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="CR8-bm-30V" customClass="InfoViewController" customModule="HangWithTsu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sON-SV-fxX"/>
                         <viewControllerLayoutGuide type="bottom" id="pGi-IC-TiM"/>
@@ -243,26 +249,19 @@
                                 <rect key="frame" x="-4" y="600" width="383" height="67"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.36862745099999999" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="toY-AY-rqg">
-                                <rect key="frame" x="-4" y="267" width="383" height="333"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="VPS-MO-prn" secondAttribute="trailing" constant="-20" id="FRs-lg-K4a"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="top" secondItem="E1D-fe-cgk" secondAttribute="topMargin" id="FpZ-Zh-SYr"/>
-                            <constraint firstItem="toY-AY-rqg" firstAttribute="top" secondItem="6Zr-L1-7cU" secondAttribute="bottom" id="Ggb-az-Gr9"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="L2K-pz-W1j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Zr-L1-7cU" secondAttribute="trailing" constant="-20" id="P0b-7g-rs4"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.15" id="PsW-DC-rc8"/>
                             <constraint firstItem="pGi-IC-TiM" firstAttribute="top" secondItem="VPS-MO-prn" secondAttribute="bottom" id="VRR-TS-1mf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="toY-AY-rqg" secondAttribute="trailing" constant="-20" id="VmI-10-NMb"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="top" secondItem="AZf-h8-lhz" secondAttribute="bottom" id="edO-c3-Rkj"/>
-                            <constraint firstItem="VPS-MO-prn" firstAttribute="top" secondItem="toY-AY-rqg" secondAttribute="bottom" id="gMH-L1-KTg"/>
                             <constraint firstItem="VPS-MO-prn" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="iMg-HX-U3k"/>
                             <constraint firstItem="pGi-IC-TiM" firstAttribute="top" secondItem="AZf-h8-lhz" secondAttribute="bottom" id="mt0-iz-heu"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.25" id="ozJ-So-3va"/>
-                            <constraint firstItem="toY-AY-rqg" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="qpt-FV-lBe"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="uQi-Gz-JDV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AZf-h8-lhz" secondAttribute="trailing" constant="-20" id="vMz-3D-IaL"/>
                             <constraint firstItem="VPS-MO-prn" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.1" id="wIC-gP-1UG"/>

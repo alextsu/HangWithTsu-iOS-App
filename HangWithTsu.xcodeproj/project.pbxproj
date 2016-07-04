@@ -15,6 +15,8 @@
 		20780C881CD8499900210B17 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C871CD8499900210B17 /* FBSDKCoreKit.framework */; };
 		20780C8B1CD84AA800210B17 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C8A1CD84AA800210B17 /* FBSDKLoginKit.framework */; };
 		20780C8D1CD84AB000210B17 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20780C8C1CD84AB000210B17 /* FBSDKShareKit.framework */; };
+		2093DA251D29DC2200738FF0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093DA241D29DC2200738FF0 /* ScrollViewController.swift */; };
+		2093DA271D29DFEB00738FF0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093DA261D29DFEB00738FF0 /* InfoViewController.swift */; };
 		20C97ED91CDAFAE4007A3823 /* Logout Rounded-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20C97ED71CDAFAE4007A3823 /* Logout Rounded-50@2x.png */; };
 		20C97EDA1CDAFAE4007A3823 /* Message-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20C97ED81CDAFAE4007A3823 /* Message-50@2x.png */; };
 		20C97EDC1CDB0014007A3823 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97EDB1CDB0014007A3823 /* EventsTableViewController.swift */; };
@@ -34,6 +36,8 @@
 		20780C8A1CD84AA800210B17 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		20780C8C1CD84AB000210B17 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		20780C8E1CD84C0B00210B17 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		2093DA241D29DC2200738FF0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		2093DA261D29DFEB00738FF0 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		20C97ED71CDAFAE4007A3823 /* Logout Rounded-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logout Rounded-50@2x.png"; sourceTree = "<group>"; };
 		20C97ED81CDAFAE4007A3823 /* Message-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message-50@2x.png"; sourceTree = "<group>"; };
 		20C97EDB1CDB0014007A3823 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				20780C8E1CD84C0B00210B17 /* Bridging-Header.h */,
 				20780C771CD8395B00210B17 /* ViewController.swift */,
 				20780C791CD8395B00210B17 /* Main.storyboard */,
+				2093DA261D29DFEB00738FF0 /* InfoViewController.swift */,
+				2093DA241D29DC2200738FF0 /* ScrollViewController.swift */,
 				20C97EDD1CDB003B007A3823 /* EventsFoldingTableViewCell.swift */,
 				20C97EDB1CDB0014007A3823 /* EventsTableViewController.swift */,
 				20780C7C1CD8395B00210B17 /* Assets.xcassets */,
@@ -256,7 +262,9 @@
 			files = (
 				20C97EDE1CDB003B007A3823 /* EventsFoldingTableViewCell.swift in Sources */,
 				20780C781CD8395B00210B17 /* ViewController.swift in Sources */,
+				2093DA251D29DC2200738FF0 /* ScrollViewController.swift in Sources */,
 				20780C761CD8395B00210B17 /* AppDelegate.swift in Sources */,
+				2093DA271D29DFEB00738FF0 /* InfoViewController.swift in Sources */,
 				20C97EDC1CDB0014007A3823 /* EventsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
