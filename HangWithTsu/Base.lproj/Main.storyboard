@@ -153,6 +153,14 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCd-rT-k6D">
                                 <rect key="frame" x="-4" y="64" width="383" height="553"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="J39-hG-sKV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J39-hG-sKV"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kSr-S4-w2c">
                                 <rect key="frame" x="16" y="69" width="343" height="25"/>
@@ -183,7 +191,9 @@
                         <constraints>
                             <constraint firstItem="gLT-sq-YDh" firstAttribute="top" secondItem="WCd-rT-k6D" secondAttribute="bottom" id="3Oe-JP-rPx"/>
                             <constraint firstItem="ev2-s9-ENi" firstAttribute="top" secondItem="kSr-S4-w2c" secondAttribute="bottom" id="4cc-Xa-35p"/>
+                            <constraint firstItem="WCd-rT-k6D" firstAttribute="width" secondItem="Z3T-xH-Y9V" secondAttribute="width" id="Bug-4b-l2h"/>
                             <constraint firstItem="gLT-sq-YDh" firstAttribute="top" secondItem="WCd-rT-k6D" secondAttribute="bottom" constant="50" id="ItT-GJ-Dad"/>
+                            <constraint firstItem="WCd-rT-k6D" firstAttribute="centerX" secondItem="Z3T-xH-Y9V" secondAttribute="centerX" id="LHI-A9-qpv"/>
                             <constraint firstItem="kSr-S4-w2c" firstAttribute="leading" secondItem="Z3T-xH-Y9V" secondAttribute="leadingMargin" id="Sh4-03-YNh"/>
                             <constraint firstItem="WCd-rT-k6D" firstAttribute="leading" secondItem="Z3T-xH-Y9V" secondAttribute="leadingMargin" constant="-20" id="U2g-lC-UuY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ev2-s9-ENi" secondAttribute="bottom" id="UXM-Go-2ze"/>
@@ -191,12 +201,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ev2-s9-ENi" secondAttribute="trailing" constant="-20" id="aNa-36-AxY"/>
                             <constraint firstItem="ev2-s9-ENi" firstAttribute="top" secondItem="WCd-rT-k6D" secondAttribute="bottom" id="cud-ON-AUm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kSr-S4-w2c" secondAttribute="trailing" id="dB5-Hw-uur"/>
+                            <constraint firstItem="WCd-rT-k6D" firstAttribute="leading" secondItem="Z3T-xH-Y9V" secondAttribute="leadingMargin" constant="-20" id="dSr-Xh-J6T"/>
                             <constraint firstItem="ev2-s9-ENi" firstAttribute="leading" secondItem="Z3T-xH-Y9V" secondAttribute="leadingMargin" constant="-20" id="qm5-jP-T1c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WCd-rT-k6D" secondAttribute="trailing" constant="-20" id="tUz-9I-oaO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WCd-rT-k6D" secondAttribute="trailing" constant="-20" id="yuj-9W-sFH"/>
                             <constraint firstItem="WCd-rT-k6D" firstAttribute="top" secondItem="gQb-Vl-GG7" secondAttribute="bottom" id="zji-0a-cWI"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Bug-4b-l2h"/>
+                                <exclude reference="LHI-A9-qpv"/>
+                                <exclude reference="U2g-lC-UuY"/>
+                                <exclude reference="yuj-9W-sFH"/>
                                 <exclude reference="4cc-Xa-35p"/>
                                 <exclude reference="3Oe-JP-rPx"/>
                             </mask>
@@ -238,8 +254,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-h8-lhz">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="167"/>
+                                <rect key="frame" x="16" y="0.0" width="343" height="167"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-Ai-TTO">
+                                        <rect key="frame" x="143" y="73" width="56" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Xve-rf-80m"/>
+                                            <constraint firstAttribute="width" constant="56" id="mJt-cv-FTk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4j8-Ai-TTO" firstAttribute="centerY" secondItem="AZf-h8-lhz" secondAttribute="centerY" id="a0A-D5-LBW"/>
+                                    <constraint firstItem="4j8-Ai-TTO" firstAttribute="centerX" secondItem="AZf-h8-lhz" secondAttribute="centerX" id="hTa-ZK-PDj"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-L1-7cU">
                                 <rect key="frame" x="-4" y="167" width="383" height="100"/>
@@ -254,7 +286,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="VPS-MO-prn" secondAttribute="trailing" constant="-20" id="FRs-lg-K4a"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="top" secondItem="E1D-fe-cgk" secondAttribute="topMargin" id="FpZ-Zh-SYr"/>
-                            <constraint firstItem="AZf-h8-lhz" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="L2K-pz-W1j"/>
+                            <constraint firstItem="AZf-h8-lhz" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" id="L2K-pz-W1j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Zr-L1-7cU" secondAttribute="trailing" constant="-20" id="P0b-7g-rs4"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.15" id="PsW-DC-rc8"/>
                             <constraint firstItem="pGi-IC-TiM" firstAttribute="top" secondItem="VPS-MO-prn" secondAttribute="bottom" id="VRR-TS-1mf"/>
@@ -263,7 +295,7 @@
                             <constraint firstItem="pGi-IC-TiM" firstAttribute="top" secondItem="AZf-h8-lhz" secondAttribute="bottom" id="mt0-iz-heu"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.25" id="ozJ-So-3va"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="uQi-Gz-JDV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AZf-h8-lhz" secondAttribute="trailing" constant="-20" id="vMz-3D-IaL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AZf-h8-lhz" secondAttribute="trailing" id="vMz-3D-IaL"/>
                             <constraint firstItem="VPS-MO-prn" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.1" id="wIC-gP-1UG"/>
                         </constraints>
                         <variation key="default">

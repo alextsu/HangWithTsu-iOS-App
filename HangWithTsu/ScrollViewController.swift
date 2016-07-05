@@ -14,14 +14,18 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     
     
-    let numberOfPages = 3
+    let numberOfPages = 6
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
-        setupView()
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,33 +35,44 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        setupView()
         
     }
     
     func setupView () {
+        
+        self.pageControl.numberOfPages = numberOfPages
+        self.pageControl.currentPage = 0
         
         self.scrollView.showsVerticalScrollIndicator = false
         self.scrollView.contentSize = CGSizeMake(self.view.frame.width * CGFloat(numberOfPages), self.scrollView.frame.size.height)
         self.scrollView.pagingEnabled = true
         self.scrollView.delegate = self
         self.scrollView.bounces = false
+        //self.scrollView.frame.width = self.view.frame.width
         
         for index in 0...(numberOfPages-1) {
             let infoViewController : InfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
             infoViewController.view.tag = index
             
             self.addChildViewController(infoViewController)
-            infoViewController.view.frame = CGRectMake(CGFloat(index) * self.view.frame.width, -1 * self.navigationController!.navigationBar.frame.height, self.view.frame.width, self.scrollView.frame.height + self.navigationController!.navigationBar.frame.height)
-            self.scrollView.addSubview(infoViewController.view)
+            infoViewController.view.frame = CGRectMake((CGFloat(index) * (self.view.frame.width)), -1 * self.navigationController!.navigationBar.frame.height, self.scrollView.frame.width, self.scrollView.frame.height + self.navigationController!.navigationBar.frame.height)
             
+            self.scrollView.addSubview(infoViewController.view)
         }
         
-
+        print("ScrollView Width \(scrollView.frame.width) & Screen Width \(self.view.frame.width) ")
         
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         scrollView.contentOffset.y = 0.0
+        let approxPage = self.scrollView.contentOffset.x / self.view.frame.width
+        self.pageControl.currentPage = Int(approxPage)
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+
     }
     
     /*
