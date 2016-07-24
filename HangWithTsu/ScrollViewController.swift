@@ -22,9 +22,6 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         
-
-        
-        
         
         // Do any additional setup after loading the view.
     }
@@ -35,8 +32,12 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        setupView()
         
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        setupView()
     }
     
     func setupView () {
@@ -45,18 +46,22 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         self.pageControl.currentPage = 0
         
         self.scrollView.showsVerticalScrollIndicator = false
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.width * CGFloat(numberOfPages), self.scrollView.frame.size.height)
+        self.scrollView.showsHorizontalScrollIndicator = false
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.width * CGFloat(numberOfPages), self.scrollView.frame.size.height)
         self.scrollView.pagingEnabled = true
         self.scrollView.delegate = self
         self.scrollView.bounces = false
-        //self.scrollView.frame.width = self.view.frame.width
+        
         
         for index in 0...(numberOfPages-1) {
             let infoViewController : InfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
             infoViewController.view.tag = index
             
             self.addChildViewController(infoViewController)
-            infoViewController.view.frame = CGRectMake((CGFloat(index) * (self.view.frame.width)), -1 * self.navigationController!.navigationBar.frame.height, self.scrollView.frame.width, self.scrollView.frame.height + self.navigationController!.navigationBar.frame.height)
+            
+            //infoViewController.view.frame = CGRectMake((CGFloat(index) * (self.scrollView.frame.width)), -1 * self.navigationController!.navigationBar.frame.height, self.scrollView.frame.width, self.scrollView.frame.height + self.navigationController!.navigationBar.frame.height)
+            
+            infoViewController.view.frame = CGRectMake((CGFloat(index) * (self.scrollView.frame.width)), 0, self.scrollView.frame.width, self.scrollView.frame.height)
             
             self.scrollView.addSubview(infoViewController.view)
         }

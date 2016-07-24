@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="261"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Mz-mx-wXe" id="618-vJ-YKG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="260.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJC-bO-U1T">
@@ -222,7 +222,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Message-50.png" id="ouT-Rg-HAb"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0g1-8J-6GV">
-                            <rect key="frame" x="111" y="7" width="153" height="31"/>
+                            <rect key="frame" x="111" y="6.5" width="153" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Upcoming"/>
@@ -274,7 +274,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-L1-7cU">
-                                <rect key="frame" x="-4" y="167" width="383" height="100"/>
+                                <rect key="frame" x="16" y="167" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPS-MO-prn">
@@ -287,14 +287,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VPS-MO-prn" secondAttribute="trailing" constant="-20" id="FRs-lg-K4a"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="top" secondItem="E1D-fe-cgk" secondAttribute="topMargin" id="FpZ-Zh-SYr"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" id="L2K-pz-W1j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Zr-L1-7cU" secondAttribute="trailing" constant="-20" id="P0b-7g-rs4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Zr-L1-7cU" secondAttribute="trailing" id="P0b-7g-rs4"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.15" id="PsW-DC-rc8"/>
                             <constraint firstItem="pGi-IC-TiM" firstAttribute="top" secondItem="VPS-MO-prn" secondAttribute="bottom" id="VRR-TS-1mf"/>
                             <constraint firstItem="6Zr-L1-7cU" firstAttribute="top" secondItem="AZf-h8-lhz" secondAttribute="bottom" id="edO-c3-Rkj"/>
                             <constraint firstItem="VPS-MO-prn" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="iMg-HX-U3k"/>
                             <constraint firstItem="pGi-IC-TiM" firstAttribute="top" secondItem="AZf-h8-lhz" secondAttribute="bottom" id="mt0-iz-heu"/>
                             <constraint firstItem="AZf-h8-lhz" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.25" id="ozJ-So-3va"/>
-                            <constraint firstItem="6Zr-L1-7cU" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" constant="-20" id="uQi-Gz-JDV"/>
+                            <constraint firstItem="6Zr-L1-7cU" firstAttribute="leading" secondItem="E1D-fe-cgk" secondAttribute="leadingMargin" id="uQi-Gz-JDV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AZf-h8-lhz" secondAttribute="trailing" id="vMz-3D-IaL"/>
                             <constraint firstItem="VPS-MO-prn" firstAttribute="height" secondItem="E1D-fe-cgk" secondAttribute="height" multiplier="0.1" id="wIC-gP-1UG"/>
                         </constraints>
