@@ -63,6 +63,10 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
             
             infoViewController.view.frame = CGRectMake((CGFloat(index) * (self.scrollView.frame.width)), 0, self.scrollView.frame.width, self.scrollView.frame.height)
             
+            infoViewController.view.layer.cornerRadius = 50
+            infoViewController.view.layer.masksToBounds = true
+            infoViewController.view.backgroundColor = UIColor.blackColor()
+            
             self.scrollView.addSubview(infoViewController.view)
         }
         
